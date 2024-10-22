@@ -97,6 +97,8 @@ Flutter apps are written in Dart, a modern, object-oriented language.
   const double pi = 3.1416;
   ```
 
+  ---
+
 - **Control Flow Statements:**
 
   ```dart
@@ -120,6 +122,24 @@ Flutter apps are written in Dart, a modern, object-oriented language.
 
   int add(int a, int b) => a + b;
   ```
+  
+### Summary: When to Use `var`, `final`, and `const`
+
+- **`var`**: 
+  - Use when the variable’s value will change after being assigned.
+  - Example: `var name = 'John';`
+  
+- **`final`**: 
+  - Use for variables that are assigned once and will not change, but may be initialized at runtime.
+  - Example: `final currentDate = DateTime.now();`
+  
+- **`const`**: 
+  - Use for compile-time constants where the value is known and will never change.
+  - Example: `const pi = 3.1416;`
+
+- **`var`** = Mutable, type inferred, value can change.
+- **`final`** = Immutable, runtime constant.
+- **`const`** = Immutable, compile-time constant.
 
 ---
 
@@ -382,6 +402,7 @@ State management is crucial for building interactive applications.
 
 - **BLoC (Business Logic Component) Pattern**
 - **Redux** and **MobX** libraries
+- Flutter **riverpod** library
 
 ---
 
@@ -611,7 +632,7 @@ Animations enhance the user experience.
 
 **Types of Animations:**
 
-- **Implicit Animations:** Simple animations using `AnimatedContainer`, `AnimatedOpacity`.
+- **Implicit Animations:** Simple animations using `AnimatedContainer`, `AnimatedOpacity`. **Preferred to explicit animations as they persist better over time.**
 
   ```dart
   AnimatedContainer(
